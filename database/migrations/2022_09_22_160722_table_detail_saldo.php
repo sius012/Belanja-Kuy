@@ -17,7 +17,7 @@ class TableDetailSaldo extends Migration
             $table->id();
             $table->integer('id_siswa');
             $table->integer('id_admin')->nullable();
-            $table->enum('aksi', ['keluar', 'masuk']);;
+            $table->enum('aksi', ['keluar', 'masuk']);
             $table->integer('nominal');
             $table->integer('saldo_tersisa');
             $table->string('keterangan');

@@ -14,9 +14,9 @@ class TableOrderSiswa extends Migration
     public function up()
     {
         Schema::create("order_siswa", function(Blueprint $table){
-            $table->string("id_order_siswa");
-            $table->string("id_order");
-            $table->string("id_pemesan");
+            $table->id();
+            $table->integer("id_order");
+            $table->integer("id_pemesan");
             $table->integer("total");
             $table->date("tanggal_pemesan");
             $table->timestamps();

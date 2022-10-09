@@ -14,7 +14,7 @@ class TableOrderMingguan extends Migration
     public function up()
     {
         Schema::create("order_mingguan", function(Blueprint $table){
-            $table->string("id_order");
+            $table->id();
             $table->date("tanggal");
             $table->string("status");
             $table->integer("total");

@@ -13,9 +13,9 @@ class TableNotif extends Migration
      */
     public function up()
     {
-        Schema::create("detail_order", function(Blueprint $table){
+        Schema::create("notif", function(Blueprint $table){
             $table->id();
-            $table->string("id_user");
+            $table->integer("id_user");
             $table->string("title");
             $table->string("status");
             $table->string("deskripsi");

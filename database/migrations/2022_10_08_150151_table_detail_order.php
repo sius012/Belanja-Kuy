@@ -14,8 +14,8 @@ class TableDetailOrder extends Migration
     public function up()
     {
         Schema::create("detail_order", function(Blueprint $table){
-            $table->string("id_order");
-            $table->string("kode_transaksi");
+            $table->id();
+            $table->integer("id_order_siswa");
             $table->string("id_produk");
             $table->integer("harga_produk");
             $table->integer("jumlah_produk");
