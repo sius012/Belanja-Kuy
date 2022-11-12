@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TableDetailProduks extends Migration
+class TableMerek extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class TableDetailProduks extends Migration
      */
     public function up()
     {
-        Schema::create("detail_produk", function(Blueprint $table){
-            $table->id();
-            $table->string("kode_produk");
-            $table->string("deskripsi",255);
-            $table->string("gambar")->nullable();
+        Schema::create("merek", function(Blueprint $table){
+            $table->id("id_merek");
+            $table->string("nama_merek");
             $table->timestamps();
-
         });
     }
 
@@ -30,6 +27,6 @@ class TableDetailProduks extends Migration
      */
     public function down()
     {
-       // Schema::drop('detail_produk');
+        //
     }
 }
